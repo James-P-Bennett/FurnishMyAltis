@@ -1,0 +1,31 @@
+// Add this to the mission ext file.
+
+class RscListbox;
+class RscButton;
+
+class FurnitureShop {
+    idd = 8000;
+    movingEnable = false;
+    enableSimulation = true;
+    
+    class controls {
+        class FurnitureList : RscListbox {
+            idc = 1500;
+            x = 0.1;
+            y = 0.2;
+            w = 0.6;
+            h = 0.6;
+        };
+        
+        class BuyButton : RscButton {
+            idc = 1600;
+            text = "Buy";
+            x = 0.72;
+            y = 0.2;
+            w = 0.2;
+            h = 0.1;
+
+            action = "[] call buyFurniture"; 
+        };
+    };
+};
